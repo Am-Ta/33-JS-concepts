@@ -1,2 +1,3 @@
-# 33-JS-concepts
-Created with CodeSandbox
+# 33 JS concepts
+
+## Each branch one concept
