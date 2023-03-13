@@ -43,3 +43,5 @@ greeting();
 > Call stack list: EMPTY
 
 > In summary, then, we start with an empty Call Stack. Whenever we invoke a function, it is automatically added to the Call Stack. Once the function has executed all of its code, it is automatically removed from the Call Stack. Ultimately, the Stack is empty again.
+
+![call stack](https://miro.medium.com/v2/resize:fit:640/1*E3zTWtEOiDWw7d0n7Vp-mA.gif "call stack")
