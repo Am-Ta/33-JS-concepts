@@ -57,3 +57,26 @@ There is a limit on the size of the stack which is 16,000 frames , more than tha
 - [The JavaScript Call Stack - What It Is and Why It's Necessary](https://www.freecodecamp.org/news/understanding-the-javascript-call-stack-861e41ae61d4)
 
 The call stack is primarily used for function call. Since the call stack is single, function(s) execution, is done, one at a time, from top to bottom. *It means the call stack is synchronous*.
+
+What is the call stack? 
+
+At the most basic level, a call stack is a data structure that uses the **Last In, First Out (LIFO)** principle to **temporarily store** and manage function call.
+
+> **LIFO**: it means that the last function that gets pushed into the stack is the first to be pop out, when the function returns.
+
+> **temporarily store**: When a function is called, the function, its parameters, and variables are pushed into the call stack to form a stack frame. This stack frame is a memory location in the stack. The memory is cleared when the function returns as it is pop out of the stack.
+
+> **Manage function call**: The call stack maintains a record of the position of each stack frame. It knows the next function to be executed (and will remove it after execution). This is what makes code execution in JavaScript synchronous.
+
+> **stack overflow**: A stack overflow occurs when there is a recursive function (a function that calls itself) without an exit point. The browser (hosting environment) has a maximum stack call that it can accomodate before throwing a stack error.
+```javascript
+function callMyself(){
+  callMyself();
+}
+
+callMyself();
+```
+- - -
+- [What Is The Call Stack?](https://web.archive.org/web/20180701233338/https://www.valentinog.com/blog/js-execution-context-call-stack/#Javascript_What_Is_The_Execution_Context_What_Is_The_Call_Stack)
+
+The first thing that gets pushed is *main()* (or global()), the main thread of execution of your Javascript program.
